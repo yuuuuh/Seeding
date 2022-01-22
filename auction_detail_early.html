@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AUCTION</title>
+<link rel = "stylesheet" type = "text/css" href="auction_detail_early.css"/>
+
+<script language="javascript">
+	function tap_click(hidden,show){
+		var1 = document.getElementById(hidden);
+		var2 = document.getElementById(show);
+
+		var1.style.visibility = "hidden";
+		var2.style.visibility = "visible";
+		this.style.fontWeight = "bold";
+		this.style.color = "#222222";
+		this.style.borderBottom = "4px";
+		this.style.borderBottomColor = "#222222";
+	}
+
+	function height(height) {
+    	document.getElementById("toptapdiv").style.height = height;
+	}
+
+</script>
+</head>
+
+<body>
+	<div id = "toptapdiv">
+		<div id = "logodiv">
+			<div id = "logoimg"><a href = "index.html"><img src = "image/logo.svg"></a></div>
+		</div> <!--end logodiv-->
+
+		<div id = "tapdiv">
+			<ul id = "mainmenu">
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "#">브랜드소개</a>
+						<ul style = "left: -53px;">
+							<li><a href = "#">시드닝소개</a></li>
+							<li><a href = "#">이벤트</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "auction_ing.html">옥션</a>
+						<ul  style = "left: -80px;">
+							<li><a href = "auction_early.html">예정된옥션</a></li>
+							<li><a href = "auction_ing.html">진행중인옥션</a></li>
+							<li><a href = "auction_end.html">마감된옥션</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "market_home.html">마켓</a>
+						<ul style = "left: -80px;">
+							<li><a href = "#">추천</a></li>
+							<li><a href = "#">판매가</a></li>
+							<li><a href = "#">최근 조회</a></li>
+							<li><a href = "#">관심</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "mypage.html">마이페이지</a>
+						<ul style = "left: -50px;">
+							<li><a href = "#">마이포켓</a></li>
+							<li><a href = "myasset.html">마이에셋</a></li>
+							<li><a href = "mypage.html">회원정보</a></li>
+						</ul>
+					</li>
+				</ul>
+		</div> <!--end tapdiv-->
+
+		<div id = "memberdiv">
+			<div id = "logindiv"><button id = "login" onclick = "location.href = 'login.html'">로그인</button></div>
+			<div id = "joindiv"><button id = "join">회원가입</button></div>
+		</div> <!--end logindiv-->
+	</div> <!--end toptapdiv-->
+
+	<div id = "seedboxdiv">
+		<div id = "seedphotodiv"></div>
+
+		<div id = "companyname"><div id = "comnamelabel">회사이름</div></div>
+
+		<div id = "seedname"><div id = "seednamelabel">종자이름</div></div>
+
+		<div id = "category"><div id = "categorylabel">분류 &nbsp; &gt &nbsp; 카테고리</div></div>
+
+		<div id = "opentime"><label id = "open">0000.00.00</label>&nbsp;오픈</div>
+	</div> <!--end seedboxdiv-->
+
+	<div id = "progressbardiv"><div id = "progressbar"></div></div>
+
+	<div id = "progressdiv">
+		<div id = "totalpro">0000주 중</div>
+		<div id = "currentpro">0000주 입찰중</div>
+
+		<div id = "percent">00%</div>
+	</div> <!--end progressdiv -->
+
+	<div id = "contenttapdiv">
+		<input type = "radio" name = "tap" id = "bidding" class = "tap" checked ><label for = "bidding" onClick="tap_click('infobox','biddingbox')">입찰</label>
+		<input type = "radio" name = "tap" id = "info" class = "tap"><label for = "info" onClick="tap_click('biddingbox','infobox')">정보</label>
+	</div> <!--end contenttapdiv-->
+
+	<div id = "contentboxdiv">
+		<div id = "biddingbox">
+			<div id = "biddingtitle">
+				<div id = "titlepricediv"><div id = "titleprice">입찰가격(1주)</div></div>
+				<div id = "titlenumdiv"><div id = "titlenum">입찰수량</div></div>
+				<div id = "titleresultdiv"><div id = "titleresult">예상결과</div></div>
+			</div> <!--end biddingtitle-->
+
+			<div id = "biddingcontent">
+				<div id = "earlydiv">0000년 00월 00일<br>오픈예정</div>
+
+			</div> <!--end biddingcontent-->
+
+			<div id = "biddingtotal">
+				<div id = "totalpricediv"><div id = "totalprice">합계</div></div>
+				<div id = "totalnumdiv"><div id = "totalnum">0,000주</div></div>
+				<div id = "ressetdiv"><button id = "resetbtn"><img src = "image/reseticon.svg" style = "position: relative; top:4px;">새로고침</button></div>
+			</div> <!--end biddingtotal-->
+		</div> <!--end biddingbox-->
+
+		<div id = "infobox">
+
+		</div>
+
+	</div> <!--end contentboxdiv-->
+
+	<div id = "endboxdiv">
+		<div id = "endboxtitle"><div id = "endboxtitlelabel">오픈예정 옥션</div></div>
+		<div id = "datediv">0000년 00월 00일 오픈예정</div>
+	</div> <!--end endboxdiv-->
+
+	<div id = "precautiondiv">
+		<div id = "precautiontitlediv"><div id = "precautiontitle">유의사항</div></div>
+		<div id = "precaution">
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">옥션 마감 후 상위 입찰 가격 순 낙찰됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">입찰금의 100%가 대기금으로 설정됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">낙찰시, 옥션 마감후 다음날 오전 9시에 ‘내 지 갑’에서 대<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금이 자동으로 출금됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">구매결정은 온전히 회원의 판단으로 이뤄졌으며, 어떠한<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경우에도 재입찰 시 원래 입찰 시 부여받은 순위는 초기화<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">옥션 마지막 날은 취소가 불가하며 재입찰 시 입찰 수량/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금액보다 높은 수량/금액만 입찰이 가능합니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">전체 옥션 수량 대비 30% 이상 수량으로 입찰하는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;입찰취소는 불가합니다.
+		</div>
+	</div> <!--end precautiondiv-->
+
+	<div id = "footer">
+			<img src = "image/footerlogo.svg"><br>
+			<label class = "footerlabel" style = "color: #1cb97c; position: relative; top:10px;">국내 종자 시장의 미래를 위한 첫걸음, 시드닝<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:40px;">시드닝 고객센터 02-0000-0000  |  admin@seedning.co.kr<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:80px;">(주)시드닝<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:90px;">대표자 : 이연정  |  사업자등록번호 : 000-00-00000  |  통신판매업신고 : 제 0000-서울강남-00000호<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:100px;">서울특별시 강남구 테헤란로<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:180px;">이용약관  |  개인정보처리방침<br></label>
+			<img src = "image/footerfacebook.svg" style = "position: relative; top:155px; left:900px;">
+			<img src = "image/footerblog.svg" style = "position: relative; top:158px; left:930px;">
+		</div>
+
+	<div id = "btndiv">
+		<a href = "#"><button id = "up"></button></a>
+		<button id = "chat"></button>
+	</div>
+
+</body>
+</html>

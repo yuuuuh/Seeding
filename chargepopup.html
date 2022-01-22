@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel = "stylesheet" type = "text/css" href="chargepopup.css"/>
+
+<script language="javascript">
+function tap_click(hidden1,hidden2,show){
+	var1 = document.getElementById(hidden1);
+	var2 = document.getElementById(hidden2);
+	var3 = document.getElementById(show);
+
+	var1.style.visibility = "hidden";
+	var2.style.visibility = "hidden";
+	var3.style.visibility = "visible";
+	this.style.fontWeight = "bold";
+	this.style.color = "#1cb97c";
+	this.style.borderBottom = "4px";
+	this.style.borderBottomColor = "#1cb97c";}
+
+</script>
+</head>
+
+<body>
+	<div id = "toptapdiv">
+		<div id = "toptap">
+			<input type = "radio" name = "tap" id = "charge" class = "tap" checked><label for = "charge" onClick="tap_click('couponboxdiv','withdrawboxdiv','chargeboxdiv')">시드머니충전</label>
+			<input type = "radio" name = "tap" id = "withdraw" class = "tap"><label for = "withdraw" onClick="tap_click('chargeboxdiv','couponboxdiv','withdrawboxdiv')">시드머니출금</label>
+			<input type = "radio" name = "tap" id = "coupon" class = "tap"><label for = "coupon" onClick="tap_click('chargeboxdiv','withdrawboxdiv','couponboxdiv')" style = "margin-right: 0px;">쿠폰 및 코드</label>
+		</div>
+	</div> <!--end toptapdiv-->
+
+	<div id = "chargeboxdiv">
+		<div id = "seedmoneydiv">
+			<div id = "haveseedmoney">보유 시드머니</div>
+			<div id = "seedmoney"><label>00,0000</label>&nbsp;&nbsp;&nbsp;시드머니</div>
+		</div>
+
+		<div id = "moneyinputdiv">
+			<input type = "text" id = "moneyinput" placeholder="금액을 입력해주세요 (1만원 이상)">
+		</div>
+
+		<div id = "moneybtndiv">
+			<input type = "radio" name = "money" id = "1" class = "money"><label for = "1">+1만원</label>
+			<input type = "radio" name = "money" id = "10" class = "money"><label for = "10">+10만원</label>
+			<input type = "radio" name = "money" id = "50" class = "money"><label for = "50">+50만원</label>
+			<input type = "radio" name = "money" id = "100" class = "money"><label for = "100">+100만원</label>
+		</div>
+
+		<div id = "afterchargediv">
+			<div id = "aftercharge">충전 후 시드머니</div>
+			<div id = "aftermoney"><label>00,000</label>&nbsp;&nbsp;&nbsp;시드머니</div>
+		</div>
+
+		<div id = "chargebtndiv">
+			<button id = "chargebtn">충전하기</button>
+		</div>
+	</div> <!--end chargeboxdiv-->
+
+	<div id = "withdrawboxdiv">
+
+	</div> <!--end withdrawboxdiv-->
+
+	<div id = "couponboxdiv">
+
+	</div> <!--end couponboxdiv-->
+</body>
+</html>

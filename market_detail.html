@@ -1,0 +1,358 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MARKET</title>
+<link rel = "stylesheet" type = "text/css" href="market_detail.css"/>
+
+<script language="javascript">
+	function height(height) {
+    	document.getElementById("toptapdiv").style.height = height;
+	}
+
+	function tap_click(hidden,show){
+		var1 = document.getElementById(hidden);
+		var2 = document.getElementById(show);
+
+		var1.style.visibility = "hidden";
+		var2.style.visibility = "visible";
+		this.style.fontWeight = "bold";
+		this.style.color = "#222222";
+		this.style.borderBottom = "4px";
+		this.style.borderBottomColor = "#222222";
+	}
+
+	function rightbox_click(hidden1,hidden2,hidden3,show){
+		var1 = document.getElementById(hidden1);
+		var2 = document.getElementById(hidden2);
+		var3 = document.getElementById(hidden3);
+		var4 = document.getElementById(show);
+
+		var1.style.visibility = "hidden";
+		var2.style.visibility = "hidden";
+		var3.style.visibility = "hidden";
+		var4.style.visibility = "visible";
+	}
+
+	 function inputNumberFormat(obj) {
+    	obj.value = comma(uncomma(obj.value));
+	 }
+
+	function comma(str) {
+    	str = String(str);
+    	return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+	}
+
+	function uncomma(str) {
+    	str = String(str);
+    	return str.replace(/[^\d]+/g, '');
+	}
+
+	function change1(num){
+		 var x  = document.form1;
+		 var y = Number(x.money.value) + num;
+		 if(y < 0) y = 0;
+		 x.money.value = y;
+ 	}
+
+	function change2(num){
+		 var x  = document.form2;
+		 var y = Number(x.week.value) + num;
+		 if(y < 0) y = 0;
+		 x.week.value = y;
+ 	}
+</script>
+</head>
+
+<body>
+	<div id = "toptapdiv">
+		<div id = "logodiv">
+			<div id = "logoimg"><a href = "index.html"><img src = "image/logo.svg"></a></div>
+		</div> <!--end logodiv-->
+
+		<div id = "tapdiv">
+			<ul id = "mainmenu">
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "#">서비스소개</a>
+						<ul style = "left: -53px;">
+							<li><a href = "#">시드닝이란</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "auction_ing.html">옥션</a>
+						<ul  style = "left: -80px;">
+							<li><a href = "auction_early.html">예정된옥션</a></li>
+							<li><a href = "auction_ing.html">진행중인옥션</a></li>
+							<li><a href = "auction_end.html">마감된옥션</a></li>
+						</ul>
+					</li>
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "market_home.html" style = "color:#1cb97c;">마켓</a>
+						<ul style = "left: -80px;">
+							<li><a href = "#">추천</a></li>
+							<li><a href = "#">판매가</a></li>
+							<li><a href = "#">최근 조회</a></li>
+							<li><a href = "#">관심</a></li>
+						</ul>
+					</li>
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "mypage.html">마이페이지</a>
+						<ul style = "left: -50px;">
+							<li><a href = "#">마이포켓</a></li>
+							<li><a href = "myasset.html">마이에셋</a></li>
+							<li><a href = "mypage.html">회원정보</a></li>
+						</ul>
+					</li>
+				</ul>
+		</div> <!--end tapdiv-->
+
+		<div id = "memberdiv">
+			<div id = "logindiv"><label id = "name">김원지</label>님 &nbsp;&nbsp;&nbsp;| </div>
+			<div id = "alarmdiv"><button id = "alarm"></button></div>
+		</div> <!--end logindiv-->
+	</div> <!--end toptapdiv-->
+
+
+	<div id = "maindiv">
+		<div id = "seedboxdiv">
+			<div id = "seedphotodiv"></div>
+
+			<label id = "companyname">농우바이오</label>
+
+			<div id = "attentiondiv">
+				<img src = "image/staricon.svg">
+				<label>관심추가</label>
+			</div>
+
+			<label id = "seedname">랑데뷰</label>
+
+			<label id = "category">채소류 &nbsp; &gt &nbsp; 토마토</label>
+
+			<div id = "opentime"><label id = "open">2020.11.20</label>&nbsp;마감</div>
+
+			<div id = "rightbox">
+				<div class = "left">옥션 최저가</div>
+				<div class = "right">9,300 시드머니</div>
+
+				<div class = "left">현재가</div>
+				<div class = "right" style = "color:#1cb97c;">11,700 시드머니</div>
+
+				<div class = "left">전일비</div>
+				<div class = "right"><img src = "image/upprice.svg" style = "position: relative; top:5px;"><label style = "color:#ff3e56">1200(1.2%)</label></div>
+			</div>
+
+		</div> <!--end seedboxdiv-->
+
+		<div id = "contenttapdiv">
+			<input type = "radio" name = "tap" id = "bidding" class = "tap" checked><label for = "bidding" onClick="tap_click('infobox','biddingbox')">입찰</label>
+			<input type = "radio" name = "tap" id = "info" class = "tap"><label for = "info" onClick="tap_click('biddingbox','infobox')">정보</label>
+		</div> <!--end contenttapdiv-->
+
+
+		<div id = "contentboxdiv">
+			<div id = "biddingbox">
+				<div id = "biddingtitle">
+					<div id = "titleleftdiv"><div id = "titleleft">수량</div></div>
+					<div id = "titlecenterdiv"><div id = "titlecenter">가격</div></div>
+					<div id = "titlerightdiv"><div id = "titleright">수량</div></div>
+				</div> <!--end biddingtitle-->
+
+				<div id = "biddingcontent">
+					<div id = "bluddiv">
+						<div class = "contentline">
+							<div class = "contentleftdiv">1</div>
+							<div class = "contentcenterdiv blue">
+								<div class = "conmoneybl">12,100</div>
+								<div class = "conpercentbl">1.6%</div>
+							</div>
+							<div class = "contentrightdiv"></div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv">1</div>
+							<div class = "contentcenterdiv blue">
+								<div class = "conmoneybl">12,000</div>
+								<div class = "conpercentbl">1.5%</div>
+							</div>
+							<div class = "contentrightdiv"></div>
+						</div> <!--end contetnline-->
+						<div class = "contentline">
+							<div class = "contentleftdiv">4</div>
+							<div class = "contentcenterdiv blue">
+								<div class = "conmoneybl">11,900</div>
+								<div class = "conpercentbl">1.4%</div>
+							</div>
+							<div class = "contentrightdiv"></div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv">6</div>
+							<div class = "contentcenterdiv blue">
+								<div class = "conmoneybl">11,800</div>
+								<div class = "conpercentbl">1.3%</div>
+							</div>
+							<div class = "contentrightdiv"></div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv">2</div>
+							<div class = "contentcenterdiv blue">
+								<div class = "conmoneybl">11,700</div>
+								<div class = "conpercentbl">1.2%</div>
+							</div>
+							<div class = "contentrightdiv"></div>
+						</div> <!--end contetnline-->
+					</div>
+
+					<div id = "reddiv">
+						<div class = "contentline">
+							<div class = "contentleftdiv"></div>
+							<div class = "contentcenterdiv red">
+								<div class = "conpercentre">1.1%</div>
+								<div class = "conmoneyre">11,600</div>
+							</div>
+							<div class = "contentrightdiv">1</div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv"></div>
+							<div class = "contentcenterdiv red">
+								<div class = "conpercentre">1.0%</div>
+								<div class = "conmoneyre">11,500</div>
+							</div>
+							<div class = "contentrightdiv">1</div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv"></div>
+							<div class = "contentcenterdiv red">
+								<div class = "conpercentre">0.9%</div>
+								<div class = "conmoneyre">11,400</div>
+							</div>
+							<div class = "contentrightdiv">2</div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv"></div>
+							<div class = "contentcenterdiv red">
+								<div class = "conpercentre">0.8%</div>
+								<div class = "conmoneyre">11,300</div>
+							</div>
+							<div class = "contentrightdiv">5</div>
+						</div> <!--end contetnline-->
+
+						<div class = "contentline">
+							<div class = "contentleftdiv"></div>
+							<div class = "contentcenterdiv red">
+								<div class = "conpercentre">0.7%</div>
+								<div class = "conmoneyre">11,200</div>
+							</div>
+							<div class = "contentrightdiv">1</div>
+						</div> <!--end contetnline-->
+					</div>
+
+					<div id = "bid
+							   dingtotal">
+						<div id = "totalleftdiv"><div id = "totalleft">14</div></div>
+						<div id = "totalcenterdiv"><div id = "totalcenter">총 수량</div></div>
+						<div id = "totalrightdiv"><div id = "totalright">10</div></div>
+					</div> <!--end biddingtotal-->
+				</div> <!--end biddingcontent-->
+			</div> <!--end biddingbox-->
+
+			<div id = "infobox">
+
+			</div> <!--end infobox-->
+		</div> <!--end contentboxdiv-->
+
+		<div id = "orderdiv">
+			<div id = "orderboxtitle">
+				<input type = "radio" name = "rightbox" id = "r1" class = "rightbox" checked><label for = "r1" onClick="rightbox_click('salediv','correctiondiv','conculsiondiv','buydiv')">구매</label>
+				<input type = "radio" name = "rightbox" id = "r2" class = "rightbox"><label for = "r2" onClick="rightbox_click('correctiondiv','conculsiondiv','buydiv','salediv')">판매</label>
+				<input type = "radio" name = "rightbox" id = "r3" class = "rightbox"><label for = "r3" onClick="rightbox_click('conculsiondiv','buydiv','salediv','correctiondiv')">정정</label>
+				<input type = "radio" name = "rightbox" id = "r4" class = "rightbox"><label for = "r4" onClick="rightbox_click('buydiv','salediv','correctiondiv','conculsiondiv')">체결</label>
+			</div>
+
+			<div id = "buydiv">
+				<div id = "useseedmoneydiv">
+					<div id = "useseedmoney">사용가능 시드머니</div>
+					<div id = "useedmoney">62,100 시드머니</div>
+				</div>
+
+				<div id = "moneybox">
+					<form name = "form1" class = "formclass">
+						<div id = "moneyboxtitle">구매단가(1주)</div>
+						<input type = "text" id = "moneyboxlabel" value="0" size="3" name = "money" onkeyup="inputNumberFormat(this)">
+					</form>
+				</div>
+
+				<div id = "numdiv">
+					<form name = "form2" class = "formclass">
+						<div id = "numtitle">수량(주)</div>
+						<input type = "text" id = "weeklabel" value="0" size="3" name = "week" onkeyup="inputNumberFormat(this)">
+						<div class = "plusminubtndiv">
+							<div class = "minususbtn" onClick="change2(-1);"></div>
+							<div class = "plusbtn" onClick="change2(1);"></div>
+						</div>
+					</form>
+				</div>
+
+				<div id = "weekselectdiv">
+					<input type = "radio" id = "5" name = "weekselect" class = "week" value = "5"><label for = "5"  >5주</label>
+					<input type = "radio" id = "10" name = "weekselect" class = "week"><label for = "10">10주</label>
+					<input type = "radio" id = "20" name = "weekselect" class = "week"><label for = "20">20주</label>
+					<input type = "radio" id = "50" name = "weekselect" class = "week"><label for = "50">50주</label>
+					<input type = "radio" id = "100" name = "weekselect" class = "week"><label for = "100">100주</label>
+				</div>
+
+				<div id = "totalmoneydiv">
+					<div id = "amount">주문금액</div>
+					<div id = "seedmoney"><label>00,000</label>시드머니</div>
+				</div>
+
+				<div id = "orderbtndiv">
+					<button id = "orderbtn">입찰주문</button>
+				</div>
+			</div> <!--end buydiv-->
+
+			<div id = "salediv">
+				<div id = "salegroup"></div>
+			</div> <!--end salediv-->
+
+			<div id = "correctiondiv">
+				<div id = "correctgroup"></div>
+			</div> <!--end salediv-->
+
+			<div id = "conculsiondiv">
+				<div id = "conculsiongroup"></div>
+			</div>
+		</div> <!--end orderdiv-->
+
+		<div id = "precautiondiv">
+			<div id = "precautiontitlediv"><div id = "precautiontitle">유의사항</div></div>
+			<div id = "precaution">
+				<img src = "image/checkicon.svg" style = "margin-right: 3px;">거래 수수료는 구매 및 판매금액의 1 주당 1.2%입니다.<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;※ 단, 5 주 이상 구매 주문 시, 거래 수수료가 1.0% 로 감면<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;됩니다.<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;구매체결 시 수수료를 포함한 결제 금액이 ‘마이 포켓’에서
+				<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;자동으로 결제됩니다.<br>
+				<img src = "image/checkicon.svg" style = "margin-right: 3px;">판매체결 시 수수료를 제외한 판매 금액이  ‘마이 포켓’에<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;합산됩니다.<br>
+				<img src = "image/checkicon.svg" style = "margin-right: 3px;">구매주문금액 전체가 대기금으로 설정되며, 주문취소 시<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;해제됩니다. <br>
+			</div>
+		</div> <!--end precautiondiv-->
+	</div> <!--end maindiv-->
+
+	<div id = "footer">
+		<img src = "image/footerlogo.svg"><br>
+		<label class = "footerlabel" style = "color: #1cb97c; position: relative; top:10px;">국내 종자 시장의 미래를 위한 첫걸음, 시드닝<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:40px;">시드닝 고객센터 02-0000-0000  |  admin@seedning.co.kr<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:80px;">(주)시드닝<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:90px;">대표자 : 이연정  |  사업자등록번호 : 000-00-00000  |  통신판매업신고 : 제 0000-서울강남-00000호<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:100px;">서울특별시 강남구 테헤란로<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:180px;">이용약관  |  개인정보처리방침<br></label>
+		<img src = "image/footerfacebook.svg" style = "position: relative; top:155px; left: 1250px;">
+		<img src = "image/footerblog.svg" style = "position: relative; top:158px; left: 1300px;">
+	</div>
+
+	<div id = "btndiv">
+		<a href = "#"><button id = "up"></button></a>
+		<button id = "chat"></button>
+	</div>
+</body>
+</html>

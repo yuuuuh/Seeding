@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AUCTION</title>
+<link rel = "stylesheet" type = "text/css" href="auction_detail_ing.css"/>
+
+<script language="javascript">
+	function height(height) {
+    	document.getElementById("toptapdiv").style.height = height;
+	}
+
+	function tap_click(hidden,show){
+		var1 = document.getElementById(hidden);
+		var2 = document.getElementById(show);
+
+		var1.style.visibility = "hidden";
+		var2.style.visibility = "visible";
+		this.style.fontWeight = "bold";
+		this.style.color = "#222222";
+		this.style.borderBottom = "4px";
+		this.style.borderBottomColor = "#222222";
+	}
+
+	function inputNumberFormat(obj) {
+    	obj.value = comma(uncomma(obj.value));
+	 }
+
+	function comma(str) {
+    	str = String(str);
+    	return str.replace(/(\d)(?=(?:\d{3})+(?!\d))/g, '$1,');
+	}
+
+	function uncomma(str) {
+    	str = String(str);
+    	return str.replace(/[^\d]+/g, '');
+	}
+
+	function change1(number){
+		var num = document.getElementById("weeklabel")
+		var this_qty = Number(num.value);
+		var result = this_qty + number;
+
+		if(result < 0)
+			result = 0;
+		num.value = result;
+	}
+
+</script>
+</head>
+
+<body>
+	<div id = "toptapdiv">
+		<div id = "logodiv">
+			<div id = "logoimg"><a href = "index.html"><img src = "image/logo.svg"></a></div>
+		</div> <!--end logodiv-->
+
+		<div id = "tapdiv">
+			<ul id = "mainmenu">
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "#">서비스소개</a>
+						<ul style = "left: -53px;">
+							<li><a href = "#">시드닝이란</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "auction_ing.html">옥션</a>
+						<ul  style = "left: -80px;">
+							<li><a href = "auction_early.html">예정된옥션</a></li>
+							<li><a href = "auction_ing.html">진행중인옥션</a></li>
+							<li><a href = "auction_end.html">마감된옥션</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "market_home.html">마켓</a>
+						<ul style = "left: -80px;">
+							<li><a href = "#">추천</a></li>
+							<li><a href = "#">판매가</a></li>
+							<li><a href = "#">최근 조회</a></li>
+							<li><a href = "#">관심</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "mypage.html">마이페이지</a>
+						<ul style = "left: -50px;">
+							<li><a href = "#">마이포켓</a></li>
+							<li><a href = "myasset.html">마이에셋</a></li>
+							<li><a href = "mypage.html">회원정보</a></li>
+						</ul>
+					</li>
+				</ul>
+		</div> <!--end tapdiv-->
+
+		<div id = "memberdiv">
+			<div id = "logindiv"><label id = "name">김원지</label>님 &nbsp;&nbsp;&nbsp;| </div>
+			<div id = "alarmdiv"><button id = "alarm"></button></div>
+		</div> <!--end logindiv-->
+	</div> <!--end toptapdiv-->
+
+	<div id = "seedboxdiv">
+		<div id = "seedphotodiv"></div>
+
+		<label id = "companyname">서울시드</label>
+
+		<label id = "seedname">화이트베리</label>
+
+		<label id = "category">채소류 &nbsp; &gt &nbsp; 딸기</label>
+
+		<div id = "opentime">2020.12.13 &nbsp; 오픈</div>
+
+		<div id = "rightbox">
+			<div class = "left">남은시간</div>
+			<div class = "right">00일 00시간 00분 00초</div>
+
+			<div class = "left">옥션수량</div>
+			<div class = "right">2,500주</div>
+
+			<div class = "left">시작가격</div>
+			<div class = "right" style = "color: #1cb97c;">22,000 시드머니</div>
+		</div>
+	</div> <!--end seedboxdiv-->
+
+	<div id = "progressbardiv"><div id = "progressbar" style = "width: 100%;"></div></div>
+
+	<div id = "progressdiv">
+		<div id = "totalpro">2,500주 중</div>
+		<div id = "currentpro">2,808주 입찰중</div>
+
+		<div id = "percent">100%</div>
+	</div> <!--end progressdiv -->
+
+	<div id = "contenttapdiv">
+		<input type = "radio" name = "tap" id = "bidding" class = "tap" checked><label for = "bidding" onClick="tap_click('infobox','biddingbox')">입찰</label>
+		<input type = "radio" name = "tap" id = "info" class = "tap"><label for = "info" onClick="tap_click('biddingbox','infobox')">정보</label>
+	</div> <!--end contenttapdiv-->
+
+	<div id = "contentboxdiv">
+		<div id = "biddingbox">
+			<div id = "biddingtitle">
+				<div id = "titlepricediv"><div id = "titleprice">입찰가격(1주)</div></div>
+				<div id = "titlenumdiv"><div id = "titlenum">입찰수량</div></div>
+				<div id = "titleresultdiv"><div id = "titleresult">예상결과</div></div>
+			</div> <!--end biddingtitle-->
+
+			<div id = "biddingcontent">
+					<div class = "bidding resultture" style = "margin-top: 20px;">
+						<div class = "conpricediv"><div class = "conprice">63,000</div></div>
+						<div class = "connumdiv"><div class = "connum">6</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">52,500</div></div>
+						<div class = "connumdiv"><div class = "connum">5</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">48,000</div></div>
+						<div class = "connumdiv"><div class = "connum">1</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">46,000</div></div>
+						<div class = "connumdiv"><div class = "connum">6</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">39,500</div></div>
+						<div class = "connumdiv"><div class = "connum">50</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">37,500</div></div>
+						<div class = "connumdiv"><div class = "connum">70</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">37,000</div></div>
+						<div class = "connumdiv"><div class = "connum">66</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">30,000</div></div>
+						<div class = "connumdiv"><div class = "connum">370</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding  resultture">
+						<div class = "conpricediv"><div class = "conprice">26,000</div></div>
+						<div class = "connumdiv"><div class = "connum">400</div></div>
+						<div class = "conresultdiv"><div class = "conresult successful">낙찰</div></div>
+					</div>
+
+					<div class = "bidding">
+						<div class = "conpricediv"><div class = "conprice">25,000</div></div>
+						<div class = "connumdiv"><div class = "connum">1630</div></div>
+						<div class = "conresultdiv"><div class = "conresult partsuccessful">선착순 부분낙찰</div></div>
+					</div>
+
+				<div class = "bidding">
+					<div class = "conpricediv"><div class = "conprice" style = "font-weight: normal;">23,500</div></div>
+					<div class = "connumdiv"><div class = "connum">50</div></div>
+					<div class = "conresultdiv"><div class = "conresult">-</div></div>
+				</div>
+
+				<div class = "bidding">
+					<div class = "conpricediv"><div class = "conprice" style = "font-weight: normal;">22,000</div></div>
+					<div class = "connumdiv"><div class = "connum">160</div></div>
+					<div class = "conresultdiv"><div class = "conresult">-</div></div>
+				</div>
+
+			</div> <!--end biddingcontent-->
+
+			<div id = "biddingtotal">
+				<div id = "totalpricediv"><div id = "totalprice">합계</div></div>
+				<div id = "totalnumdiv"><div id = "totalnum">2,808주</div></div>
+				<div id = "ressetdiv"><button id = "resetbtn"><img src = "image/reseticon.svg">새로고침</button></div>
+			</div> <!--end biddingtotal-->
+		</div> <!--end biddingbox-->
+
+		<div id = "infobox">
+			<div id = "plantinfo">
+				<div id = "planttitlediv"><div id = "planttitle">종자 정보</div></div>
+
+				<div id = "plantinfodiv">
+					<div id = "plantnameinfo">화이트베리</div>
+					<div id = "cateinfo">채소류&nbsp; &gt &nbsp; 딸기</div>
+					<div id = "plantcon">화이트베리는 국내에서 2016년 기준 전국 재배 면적이 약 500ha로 약 0.5만톤을 생산하여 그 중 200톤을 미국, 싱가포르, 중국, 독일 등 다양한 국가로 수출하였다. <br><br>국내에서 최초로 미국 펜실베니아에 종자 수출을 통해 연 1억원 이상의 지속적인 로열티 매출을 올리는 쾌거를 이루었다.</div>
+				</div>
+
+				<div id  = "plantgraphdiv">
+					<div id = "graph"><img src = "image/plantgraph.svg"></div>
+					<div id = "plantresult">
+						<div class = "line" >
+							<div class = "list"><div class = "listdot" style = "background-color: #1cb97c;"></div></div>
+							<div class = "country"><div class = "countryname">대한민국</div>
+
+							</div>
+							<div class = "graphper">70%</div>
+						</div>
+
+						<div class = "line">
+							<div class = "list"><div class = "listdot" style = "background-color: #6e6e6e;"></div></div>
+							<div class = "country"><div class = "countryname">미국</div>
+
+							</div>
+							<div class = "graphper">20%</div>
+						</div>
+
+						<div class = "line">
+							<div class = "list"><div class = "listdot" style = "background-color: #d8d8d8;"></div></div>
+							<div class = "country"><div class = "countryname">ETC</div>
+
+							</div>
+							<div class = "graphper">10%</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id = "companyinfo">
+				<div id = "compatitlediv"><div id = "compatitle">회사 정보</div></div>
+
+				<div id = "companyinfodiv">
+					<div id = "cplantnameinfo">화이트베리</div>
+					<div id = "tablediv">
+						<div class = "tableline">
+							<div class = "tableright"><div class = "rightlabel">매출</div></div>
+							<div class = "tableleft"><div class = "leftlabel">18억 5000만</div></div>
+						</div>
+
+						<div class = "tableline">
+							<div class = "tableright"><div class = "rightlabel">순이익</div></div>
+							<div class = "tableleft"><div class = "leftlabel">7억 1500만</div></div>
+						</div>
+
+						<div class = "tableline" style = "height: 127px;">
+							<div class = "tableright" style = "height: 122px; border-bottom : solid 1px #d8d8d8;"><div class = "rightlabel">보유종자</div></div>
+							<div class = "tableleft" style = "height: 122px;">
+								<div class = "haveplant">
+									<img src = "image/companyinfo1.jpg" style = "margin-left: 22px;">
+									<div class = "hplantname">어텀크리스피</div>
+								</div>
+
+								<div class = "haveplant">
+									<img src = "image/companyinfo2.jpg" style = "margin-left: 25px;">
+									<div class = "hplantname">샤인피치</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id = "cominfo">
+						서울시드 주식회사는 종묘업계의 세계 인류기업인 일본 다끼이주식회사와 공동육성하여 고품질 종자의 육성, 개발 그리고 보급에 최선을 다하고 있습니다.<br><br>또한 앞선 육종기술과 농업기술을 도입시켜 농민들의 소득증대 및 경쟁력 향상에 기여하며 ‘세계 최고 품질의 우수종자 개발’이라는 작은 성과에 만족하지 않고 ‘세계 최고의 육종 기술 개발’로 농가 소득창출과 한국 농업의 진흥 및 발전을 시키는데 주역이 되겠습니다.
+					</div>
+				</div>
+			</div>
+		</div> <!--end infobox-->
+	</div> <!--end contentboxdiv-->
+
+	<div id = "orderdiv">
+		<div id = "orderboxtitle">
+			<div id = "orderboxtitlelabel">입찰주문</div>
+		</div>
+
+		<div id = "useseedmoneydiv">
+			<div id = "useseedmoney">사용가능 시드머니</div>
+			<div id = "useedmoney">62,100 시드머니</div>
+		</div>
+
+		<div id = "moneybox">
+			<div id = "moneyboxtitle">입찰가격(1주)</div>
+			<input type = "text" id = "moneyboxlabel" value="0" size="3" name = "money" onkeyup="inputNumberFormat(this)">
+		</div>
+
+		<div id = "ratediv">입찰가격 대비 최근 1년 종자비율 수익률<label id = "ratepercent">11.2%</label></div>
+
+		<div id = "numdiv">
+			<div name = "form1" class = "formclass">
+				<div id = "numtitle">수량(주)</div>
+				<input type = "text" id = "weeklabel" value="0" size="3" name = "week" onkeyup="inputNumberFormat(this)">
+				<div class = "plusminubtndiv">
+					<div class = "minususbtn" onClick="change1(-1);"></div>
+					<div class = "plusbtn" onClick="change1(1);"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id = "weekselectdiv">
+			<input type = "radio" id = "5" name = "weekselect" class = "week" value = "5"><label for = "5"  >5주</label>
+			<input type = "radio" id = "10" name = "weekselect" class = "week"><label for = "10">10주</label>
+			<input type = "radio" id = "20" name = "weekselect" class = "week"><label for = "20">20주</label>
+			<input type = "radio" id = "50" name = "weekselect" class = "week"><label for = "50">50주</label>
+			<input type = "radio" id = "100" name = "weekselect" class = "week"><label for = "100">100주</label>
+		</div>
+
+		<div id = "totalmoneydiv">
+			<div id = "amount">주문금액</div>
+			<div id = "seedmoney"><label>00,000</label>시드머니</div>
+		</div>
+
+		<div id = "orderbtndiv">
+			<button id = "orderbtn">입찰주문</button>
+		</div>
+	</div> <!--end orderdiv-->
+
+	<div id = "precautiondiv">
+		<div id = "precautiontitlediv"><div id = "precautiontitle">유의사항</div></div>
+		<div id = "precaution">
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">옥션 마감 후 상위 입찰 가격 순 낙찰됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">입찰금의 100%가 대기금으로 설정됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">낙찰시, 옥션 마감후 다음날 오전 9시에 ‘내 지 갑’에서 대<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금이 자동으로 출금됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">구매결정은 온전히 회원의 판단으로 이뤄졌으며, 어떠한<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;경우에도 재입찰 시 원래 입찰 시 부여받은 순위는 초기화<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;됩니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">옥션 마지막 날은 취소가 불가하며 재입찰 시 입찰 수량/<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;금액보다 높은 수량/금액만 입찰이 가능합니다.<br>
+			<img src = "image/checkicon.svg" style = "margin-right: 3px;">전체 옥션 수량 대비 30% 이상 수량으로 입찰하는 경우<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;입찰취소는 불가합니다.
+		</div>
+	</div> <!--end precautiondiv-->
+
+	<div id = "footer">
+		<img src = "image/footerlogo.svg"><br>
+		<label class = "footerlabel" style = "color: #1cb97c; position: relative; top:10px;">국내 종자 시장의 미래를 위한 첫걸음, 시드닝<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:40px;">시드닝 고객센터 02-0000-0000  |  admin@seedning.co.kr<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:80px;">(주)시드닝<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:90px;">대표자 : 이연정  |  사업자등록번호 : 000-00-00000  |  통신판매업신고 : 제 0000-서울강남-00000호<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:100px;">서울특별시 강남구 테헤란로<br></label>
+		<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:180px;">이용약관  |  개인정보처리방침<br></label>
+		<img src = "image/footerfacebook.svg" style = "position: relative; top:155px; left: 1250px;">
+		<img src = "image/footerblog.svg" style = "position: relative; top:158px; left: 1300px;">
+	</div>
+
+	<div id = "btndiv">
+		<a href = "#"><button id = "up"></button></a>
+		<button id = "chat"></button>
+	</div>
+</body>
+</html>

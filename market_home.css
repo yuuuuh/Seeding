@@ -1,0 +1,89 @@
+body{width:1920px; height:  3007px; margin: 0 auto;}
+
+#notificationdiv{width: 1920px; height: 60px; margin: 0 auto; background-color: #222222; position: fixed; top:0px;}
+#announcediv{width: 500px; height: 60px; display: table; margin-left: 40px; float: left;}
+#announceimg{width: 40px; height: 25px; text-align: center; display: table-cell; vertical-align: middle; position: relative; top:2px;}
+#announcelabel{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #ffffff; margin-left: 5px; display: table-cell; vertical-align: middle;}
+#detaildiv{width: 130px; height: 60px; display: table; margin-right: 50px; float: right;}
+#detaillabel{font-family: 'Noto Sans CJK KR'; font-size: 14px; font-weight: 300; font-stretch: normal; font-style: normal; line-height:-0.8px; letter-spacing: -1px; color: #ffffff; margin-left: 5px; display: table-cell; vertical-align: middle;}
+#detailimg{width: 40px; height: 25px; text-align: center; display: table-cell; vertical-align: middle; position: relative; top:2px;}
+
+#toptapdiv{width: 1920px; height: 100px; margin: 0 auto; border-bottom:solid 1px #e9e9e9; position: fixed; top:60px; background-color: #ffffff;}
+#logodiv{width: 150px; height: 100px; display: table; margin-left: 300px; float: left;}
+#logoimg{width: 150px; height: 30px; text-align: center; display: table-cell; vertical-align: middle;}
+#tapdiv{width: 600px; height: 100px; display: table; margin-left: 255px; float: left;}
+
+#mainmenu{list-style-type:none; width: 600px; height: 100px;}
+#mainmenu li{float: left; position: relative;margin: 15px 80px 0px 0px;}
+#mainmenu li a{display: block; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #222222; text-decoration: none;}
+#mainmenu li:hover > a{color: #1cb97c;}
+#mainmenu ul{list-style-type:none; margin: 0; position: absolute; width: 200px; opacity: 0;}
+#mainmenu ul li{float: none;}
+#mainmenu ul li a{font-size: 14px; text-align: center; font-weight: normal;}
+#mainmenu ul li:hover a{color: #1cb97c;}
+#mainmenu li:hover ul{opacity: 1;}
+
+#memberdiv{width: 200px; height: 100px; display: table; float: left; margin-right: 50px; float: right;}
+#logindiv{width: 83px; height: 100px; text-align: center; display: table-cell; vertical-align: middle;}
+#login{width: 83px; height: 40px; border-radius: 20px; border: solid 1px #e9e9e9; display: table;  outline: none; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:-0.7px; letter-spacing: -1px; color: #222222; }
+#joindiv{width: 97px; height: 100px; text-align: center; display: table-cell; vertical-align: middle; margin-left: 10px;}
+#join{width: 97px; height: 40px; border-radius: 20px; background-color: #1cb97c; display: table; border: none; outline: none; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:-0.7px; letter-spacing: -1px; color: #ffffff;}
+
+#maindiv{width: 1920px; height: 2400px; margin-top: 163px;}
+
+#markettapdiv{width: 1920px; height: 79px; margin: 0px auto; text-align: center; background-color: #f5f5f5; margin-top: 33px;}
+#markettap{width: 750px; height: 79px; margin: 0 auto;}
+.tapclickdiv{width: 120px; height: 79px; float: left; text-align: center; display: table; margin-left: 80px;}
+.tapclicklabel{display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #6e6e6e;}
+#clicked{color: #1cb97c; border-bottom: solid 4px #1cb97c;}
+
+#kinddiv{width: 1320px; height: 270px; margin: 0 auto; text-align: center;}
+.kind{width: 165px; height: 130px; float: left; text-align: center; margin-top: 72px;}
+.kindimg{width: 80px; height: 80px;border-radius: 50px; margin: 0 auto;}
+.kindname{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.87px; color: #222222; margin-top: 20px;}
+
+#searchboxdiv{width: 1320px; height: 53px; margin: 80px auto 0px; border-bottom: solid 1px #e9e9e9; padding-bottom: 23px;}
+#totalauction{width:150px; height: 30px; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1.16px; color: #222222; float: left;}
+#auctionnum{color: #1cb97c;}
+#searchdiv{float: right;}
+select{width:80px;height:20px; border-style : none; -webkit-appearance: none;-moz-appearance: none;appearance: none;}
+select::-ms-expand {display: none;}
+.select_font{font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1.3px; color: #3f3f3f; background: url("image/select.svg")no-repeat 99% 10%;}
+
+#seedbox{width: 1345px; height: 1745px; margin: 40px auto 0px; }
+.line{width:1320px; height: 380px; margin-top:86px;}
+.auctiondiv{width: 400px; height: 380px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1); background-color: #ffffff; margin-right: 60px; float: left;}
+.auctionimagediv{width: 370px; height: 240px; background-color: #ced2d3; padding-top: 20px; padding-left: 30px;}
+.companydiv{height: 28px; border-radius: 5px; background-color: #afb2b3; text-align: center; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #ffffff; padding-left: 7px; padding-right: 7px;}
+.plantnamediv{width: 350px;  height: 50px; font-family:"Noto Sans CJK KR"; font-size:36px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 1.25; letter-spacing: -1.5px; color: #ffffff; margin-top: 5px;}
+.categorydiv{width: 350px;  height: 50px; font-family:"Noto Sans CJK KR"; font-size:21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: 2.14; letter-spacing: -0.88px; color: #ffffff; margin-top: 5px;}
+.pricediv{width: 400px; height: 140px;}
+.pricelinediv{width: 400px; height: 38px;}
+.price_left{width:120px; height: 38px; display: table; text-align: left; float: left; margin-right: 50px; padding-left: 30px;}
+.leftlabel{display: table-cell; vertical-align: middle; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #6e6e6e;}
+.price_right{width:170px; height: 38px; display: table; text-align: right; float: left; padding-right: 30px;}
+.rightlabel{display: table-cell; vertical-align: middle; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #3f3f3f;}
+.down{color:#1f4dc2;}
+.up{color:#ff3e56;}
+.end_left{display: table-cell; vertical-align: middle; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: bold; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #3f3f3f;}
+.end_right{display: table-cell; vertical-align: middle; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #1cb97c;}
+
+
+#btndiv{width: 50px; height: 120px; float: left; position:fixed; bottom:10px; left:1790px;}
+  #up{width:50px; height: 50px; background-image: url("image/uppageicon.svg"); border: none; outline: none; background-color: transparent;}
+  #chat{width:60px; height: 60px; background-image: url("image/chaticon.svg"); border: none; outline: none; background-color: transparent; position: relative; top:10px; right: 8px;}
+
+#footer{width: 1620px; height: 390px; background-color: #f5f5f5; position: relative; right:720px; top:190px; padding-left: 310px; padding-top: 60px;}
+  .footerlabel{font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: 300; font-stretch: normal; font-style: normal; line-height: 1.67px; letter-spacing: -0.3px;}
+
+#marhover1:hover {background-image: url("image/market_hover_1.jpg");}
+#marhover2:hover {background-image: url("image/market_hover_2.png");}
+#marhover3:hover {background-image: url("image/market_hover_3.jpg");}
+#marhover4:hover {background-image: url("image/market_hover_4.jpg");}
+#marhover5:hover {background-image: url("image/market_hover_5.jpg");}
+#marhover6:hover {background-image: url("image/market_hover_6.jpg");}
+#marhover7:hover {background-image: url("image/market_hover_7.jpg");}
+#marhover8:hover {background-image: url("image/market_hover_8.png");}
+#marhover9:hover {background-image: url("image/market_hover_9.png");}
+#marhover10:hover {background-image: url("image/market_hover_10.png");}
+#marhover11:hover {background-image: url("image/market_hover_11.jpg");}

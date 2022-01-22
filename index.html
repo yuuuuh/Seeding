@@ -1,0 +1,428 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Seedning</title>
+<link rel = "stylesheet" type = "text/css" href="index.css"/>
+</head>
+
+<script language="javascript">
+	function onmouse(company,plant,cate){
+		var child1 = document.getElementById(company);
+		var child2 = document.getElementById(plant);
+		var child3 = document.getElementById(cate);
+		child1.style.visibility = "hidden";
+		child2.style.visibility = "hidden";
+		child3.style.visibility = "hidden";
+	}
+
+	function outmouse(company,plant,cate){
+		var child1 = document.getElementById(company);
+		var child2 = document.getElementById(plant);
+		var child3 = document.getElementById(cate);
+		child1.style.visibility = "visible";
+		child2.style.visibility = "visible";
+		child3.style.visibility = "visible";
+	}
+
+	function height(height) {
+    	document.getElementById("toptapdiv").style.height = height;
+	}
+
+</script>
+
+
+<body>
+	<div id = "notificationdiv">
+		<div id = "announcediv">
+			<div id = "announceimg"><img src = "image/accounceicon.svg"></div>
+			<div id = "announcelabel">매일 오전 10시 / 오후 4시 씨드닝에서 새로운 옥션이 시작됩니다.</div>
+		</div>
+
+		<div id = "detaildiv">
+			<div id = "detaillabel">자세히 알아보기</div>
+			<div id = "detailimg"><img src = "image/nexticon_small.svg"></div>
+		</div>
+	</div> <!--end notificationdiv-->
+
+	<div id = "toptapdiv">
+		<div id = "logodiv">
+			<div id = "logoimg"><a href = "index.html"><img src = "image/logo.svg"></a></div>
+		</div> <!--end logodiv-->
+
+		<div id = "tapdiv">
+			<ul id = "mainmenu">
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "#">서비스소개</a>
+						<ul style = "left: -53px;">
+							<li><a href = "#">시드닝이란</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "auction_ing.html">옥션</a>
+						<ul  style = "left: -80px;">
+							<li><a href = "auction_early.html">예정된옥션</a></li>
+							<li><a href = "auction_ing.html">진행중인옥션</a></li>
+							<li><a href = "auction_end.html">마감된옥션</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "market_home.html">마켓</a>
+						<ul style = "left: -80px;">
+							<li><a href = "#">추천</a></li>
+							<li><a href = "#">판매가</a></li>
+							<li><a href = "#">최근 조회</a></li>
+							<li><a href = "#">관심</a></li>
+						</ul>
+					</li>
+
+					<li onMouseOver="height('260px')" onMouseOut="height('100px')"><a href = "mypage.html">마이페이지</a>
+						<ul style = "left: -50px;">
+							<li><a href = "">마이포켓</a></li>
+							<li><a href = "myasset.html">마이에셋</a></li>
+							<li><a href = "mypage.html">회원정보</a></li>
+						</ul>
+					</li>
+				</ul>
+		</div> <!--end tapdiv-->
+
+		<div id = "memberdiv">
+			<div id = "logindiv"><button id = "login" onclick = "location.href = 'login.html'">로그인</button></div>
+			<div id = "joindiv"><button id = "join">회원가입</button></div>
+		</div> <!--end logindiv-->
+	</div> <!--end toptapdiv-->
+
+	<div class = "imagebannerdiv">
+		<div id = "bigtitle">종자, 나눌수록 자라다</div>
+		<div id = "smalltitle">세계 최초 품종 보호권 거래 플랫폼<br>국내 종자 시장의 미래를 위한 첫걸음</div>
+		<div id = "goauction"><button id = "goauctionbtn" onClick="location.href = 'auction_ing.html'">진행중인 옥션 보러가기</button></div>
+
+		<div id = "pagediv">
+			<img src = "image/banner_leftbtn.svg">
+			<img src = "image/banner_rightbtn.svg">
+		</div>
+
+		<div id = "linediv">
+			<hr style = "width: 180px; height: 1px; background-color: #ffffff; border:none;">
+			<hr style = "width:60px; height: 3px; background-color: #ffffff; border: none; position: relative; bottom:10px; right: 60px;">
+		</div>
+	</div><!--end imagebannerdiv-->
+
+	<div id = "maindiv">
+		<div id = "deadlinediv">
+			<div id = "deadlinetitlediv">마감임박 옥션</div>
+
+			<div class = "auctiondiv">
+				<div class = "auctiontitlediv"><div class = "auctiontitle">옥션 오픈일</div></div>
+				<div class = "auctiontitledatediv"><div class = "auctiontitledate">00.00.00</div></div>
+
+				<div class = "auctionimagediv" id = "homehover1" style = "background-color: #ced2d3;" onMouseOver="onmouse('c1','p1','ca1')" onMouseOut="outmouse('c1','p1','ca1')">
+					<label class = "companydiv" id = "c1">연정중앙회</label>
+					<div class = "plantnamediv" id = "p1">퍼플벨</div>
+					<div class = "category" id = "ca1">채소류 &nbsp; &gt &nbsp; 가지</div>
+				</div>
+
+				<div class = "endtimediv">
+					<div class = "endtimetitle"><img src = "image/auction_endtimer.svg" style = "position: relative; top:5px; right: 3px;">옥션 종료까지</div>
+					<div class = "endtimer">00:00:00:00</div>
+				</div>
+
+				<div class = "pricediv">
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "startlabel">시작가</div></div>
+						<div class = "price_right"><div class = "startpricelabel">11,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최고가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">33,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최저가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">11,000</div></div>
+					</div>
+				</div>
+
+				<div class = "weekdiv">
+					<div class = "week_left"><div class = "weeklabel">800주</div></div>
+					<div class = "week_right"><div class = "percentlabel">100%</div></div>
+				</div>
+
+				<div class = "progressbardiv"><div class = "progressbar"></div></div>
+			</div> <!--end auctiondiv-->
+
+			<div class = "auctiondiv">
+				<div class = "auctiontitlediv"><div class = "auctiontitle">옥션 오픈일</div></div>
+				<div class = "auctiontitledatediv"><div class = "auctiontitledate">00.00.00</div></div>
+
+				<div class = "auctionimagediv" id = "homehover2" style = "background-color: #cfcac7;" onMouseOver="onmouse('c2','p2','ca2')" onMouseOut="outmouse('c2','p2','ca2')">
+					<label class = "companydiv" id = "c2">한미종묘</label>
+					<div class = "plantnamediv" id = "p2">페스티벌소프트핑크</div>
+					<div class = "category" id = "ca2">화훼류 &nbsp; &gt &nbsp; 거베라</div>
+				</div>
+
+				<div class = "endtimediv">
+					<div class = "endtimetitle"><img src = "image/auction_endtimer.svg" style = "position: relative; top:5px; right: 3px;">옥션 종료까지</div>
+					<div class = "endtimer">00:00:00:00</div>
+				</div>
+
+				<div class = "pricediv">
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "startlabel">시작가</div></div>
+						<div class = "price_right"><div class = "startpricelabel">20,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최고가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">46,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최저가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">20,000</div></div>
+					</div>
+				</div>
+
+				<div class = "weekdiv">
+					<div class = "week_left"><div class = "weeklabel">1200주</div></div>
+					<div class = "week_right"><div class = "percentlabel">70%</div></div>
+				</div>
+
+				<div class = "progressbardiv"><div class = "progressbar"></div></div>
+			</div> <!--end auctiondiv-->
+
+			<div class = "auctiondiv" style="margin-right: 0px;">
+				<div class = "auctiontitlediv"><div class = "auctiontitle">옥션 오픈일</div></div>
+				<div class = "auctiontitledatediv"><div class = "auctiontitledate">00.00.00</div></div>
+
+				<div class = "auctionimagediv" id = "homehover3" style = "background-color: #aeaaab;" onMouseOver="onmouse('c3','p3','ca3')" onMouseOut="outmouse('c3','p3','ca3')">
+					<label class = "companydiv" id = "c3">동방종묘</label>
+					<div class = "plantnamediv" id = "p3">팔도사나이</div>
+					<div class = "category" id = "ca3">채소류 &nbsp; &gt &nbsp; 고추</div>
+				</div>
+
+				<div class = "endtimediv">
+					<div class = "endtimetitle"><img src = "image/auction_endtimer.svg" style = "position: relative; top:5px; right: 3px;">옥션 종료까지</div>
+					<div class = "endtimer">00:00:00:00</div>
+				</div>
+
+				<div class = "pricediv">
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "startlabel">시작가</div></div>
+						<div class = "price_right"><div class = "startpricelabel">7,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최고가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">21,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최저가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">7,000</div></div>
+					</div>
+				</div>
+
+				<div class = "weekdiv">
+					<div class = "week_left"><div class = "weeklabel">950주</div></div>
+					<div class = "week_right">
+					  <div class = "percentlabel">90%</div></div>
+				</div>
+
+				<div class = "progressbardiv"><div class = "progressbar"></div></div>
+			</div> <!--end auctiondiv-->
+		</div> <!--end deadlinediv-->
+
+		<div id = "bannerdiv"></div>
+
+		<div id = "livelinkdiv">
+			<div id = "livelinktitle">실시간 거래 순위</div>
+
+			<div id = "linkbtndiv">
+				<div class = "btndiv"><button id = "manybtn">거래 많은 씨드</button></div>
+				<div class = "btndiv" style="margin-left: 9px;"><button id = "moneytopbtn">거래액 높은 씨드</button></div>
+			</div>
+
+			<div id = "linkboxdiv">
+				<div class = "linkline">
+					<div class = "linknum">1</div>
+					<div class = "seedname">랑데뷰</div>
+					<div class = "comname">농우바이오</div>
+					<div class = "linkprice">11,700</div>
+					<div class = "upprice">
+						<img src = "image/upprice.svg" style = "float: left;">
+						<div class = "upnum">1,200</div>
+						<div class = "uppercent">(1.2%)</div>
+					</div>
+				</div>
+
+				<div class = "linkline">
+					<div class = "linknum">2</div>
+					<div class = "seedname">더블스카렛트</div>
+					<div class = "comname">청원종묘</div>
+					<div class = "linkprice">27,700</div>
+					<div class = "downprice">
+						<img src = "image/downprice.svg" style = "float: left;">
+						<div class = "downnum">1,600</div>
+						<div class = "downpercent">(0.9%)</div>
+					</div>
+				</div>
+
+				<div class = "linkline">
+					<div class = "linknum">3</div>
+					<div class = "seedname">가브리엘스하트</div>
+					<div class = "comname">에이스하훼통상</div>
+					<div class = "linkprice">19,000</div>
+					<div class = "upprice">
+						<img src = "image/upprice.svg" style = "float: left;">
+						<div class = "upnum">1,600</div>
+						<div class = "uppercent">(2.2%)</div>
+					</div>
+				</div>
+
+				<div class = "linkline">
+					<div class = "linknum">4</div>
+					<div class = "seedname">화이트베리</div>
+					<div class = "comname">서울시드</div>
+					<div class = "linkprice">25,200</div>
+					<div class = "upprice">
+						<img src = "image/upprice.svg" style = "float: left;">
+						<div class = "upnum">1,200</div>
+						<div class = "uppercent">(0.7%)</div>
+					</div>
+				</div>
+
+				<div class = "linkline">
+					<div class = "linknum">5</div>
+					<div class = "seedname">팔도사나이</div>
+					<div class = "comname">동방종묘</div>
+					<div class = "linkprice">&nbsp;&nbsp;&nbsp;8,700</div>
+					<div class = "downprice">
+						<img src = "image/downprice.svg" style = "float: left;">
+						<div class = "downnum">300</div>
+						<div class = "downpercent">(0.2%)</div>
+					</div>
+				</div>
+			</div>
+		</div> <!--end livelinkdiv-->
+
+		<div id = "newauctiondiv">
+			<div id = "newauctiontitle">
+				최근 오픈된 옥션
+				<div id = "newacutionbtn">
+					<img src = "image/newauc_left.svg">
+					<img src = "image/newauc_right.svg" style = "margin-left: 15px;">
+				</div>
+			</div>
+
+			<div id = "newauction">
+				<div class = "auctiondiv">
+				<div class = "auctiontitlediv"><div class = "auctiontitle">옥션 오픈일</div></div>
+				<div class = "auctiontitledatediv"><div class = "auctiontitledate">00.00.00</div></div>
+
+				<div class = "auctionimagediv" id = "homehover4" style = "background-color: #7f8487;" onMouseOver="onmouse('c4','p4','ca4')" onMouseOut="outmouse('c4','p4','ca4')">
+					<label class = "companydiv" id = "c4">원지바이오</label>
+					<div class = "plantnamediv" id = "p4">샤인마토</div>
+					<div class = "category" id = "ca4">채소류 &nbsp; &gt &nbsp; 토마토</div>
+				</div>
+
+				<div class = "endtimediv">
+					<div class = "endtimetitle"><img src = "image/auction_endtimer.svg" style = "position: relative; top:5px; right: 3px;">옥션 종료까지</div>
+					<div class = "endtimer">00:00:00:00</div>
+				</div>
+
+				<div class = "pricediv">
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "startlabel">시작가</div></div>
+						<div class = "price_right"><div class = "startpricelabel">12,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최고가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">54,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최저가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">13,000</div></div>
+					</div>
+				</div>
+
+				<div class = "weekdiv">
+					<div class = "week_left"><div class = "weeklabel">4000주</div></div>
+					<div class = "week_right"><div class = "percentlabel">30%</div></div>
+				</div>
+
+				<div class = "progressbardiv"><div class = "progressbar"></div></div>
+			</div> <!--end auctiondiv-->
+
+			<div class = "auctiondiv" style = "margin-right: 0px;">
+				<div class = "auctiontitlediv"><div class = "auctiontitle">옥션 오픈일</div></div>
+				<div class = "auctiontitledatediv"><div class = "auctiontitledate">00.00.00</div></div>
+
+				<div class = "auctionimagediv" id = "homehover5" style = "background-color: #b5a19a;" onMouseOver="onmouse('c5','p5','ca5')" onMouseOut="outmouse('c5','p5','ca5')">
+					<label class = "companydiv" id = "c5">예원바이오산업</label>
+					<div class = "plantnamediv" id = "p5">달코미</div>
+					<div class = "category" id = "ca5">과수류 &nbsp; &gt &nbsp; 감귤</div>
+				</div>
+
+				<div class = "endtimediv">
+					<div class = "endtimetitle"><img src = "image/auction_endtimer.svg" style = "position: relative; top:5px; right: 3px;">옥션 종료까지</div>
+					<div class = "endtimer">00:00:00:00</div>
+				</div>
+
+				<div class = "pricediv">
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "startlabel">시작가</div></div>
+						<div class = "price_right"><div class = "startpricelabel">21,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최고가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">77,000</div></div>
+					</div>
+
+					<div class = "pricelinediv">
+						<div class = "price_left"><div class = "toplowlabel">최저가</div></div>
+						<div class = "price_right"><div class = "toplowpricelabel">21,000</div></div>
+					</div>
+				</div>
+
+				<div class = "weekdiv">
+					<div class = "week_left"><div class = "weeklabel">2750주</div></div>
+					<div class = "week_right"><div class = "percentlabel">60%</div></div>
+				</div>
+
+				<div class = "progressbardiv"><div class = "progressbar"></div></div>
+			</div> <!--end auctiondiv-->
+
+			</div>
+
+		</div> <!--end newauctiondiv-->
+
+		<div id = "opendiv">
+			<div id = "opentitle">씨드닝에서 옥션 오픈하기<br><font style = "font-size:18px; font-weight: 300;">당신의 씨드 이야기를 소개하고 씨드너를 만나보세요</font></div>
+			<button id = "openbtn">오픈하기</button>
+
+		</div> <!--end opendiv-->
+
+		<div id = "footer">
+			<img src = "image/footerlogo.svg"><br>
+			<label class = "footerlabel" style = "color: #1cb97c; position: relative; top:10px;">국내 종자 시장의 미래를 위한 첫걸음, 시드닝<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:40px;">시드닝 고객센터 02-0000-0000  |  admin@seedning.co.kr<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:80px;">(주)시드닝<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:90px;">대표자 : 이연정  |  사업자등록번호 : 000-00-00000  |  통신판매업신고 : 제 0000-서울강남-00000호<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:100px;">서울특별시 강남구 테헤란로<br></label>
+			<label class = "footerlabel" style = "color: #3f3f3f; position: relative; top:180px;">이용약관  |  개인정보처리방침<br></label>
+			<img src = "image/footerfacebook.svg" style = "position: relative; top:155px; left:900px;">
+			<img src = "image/footerblog.svg" style = "position: relative; top:158px; left:930px;">
+		</div>
+
+	</div> <!--end maindiv-->
+
+	<div id = "btndiv">
+		<a href = "#"><button id = "up"></button></a>
+		<button id = "chat"></button>
+	</div>
+</body>
+</html>

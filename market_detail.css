@@ -1,0 +1,137 @@
+body{width:1920px; height:3020px; margin: 0 auto;}
+
+#toptapdiv{width: 1920px; height: 100px; margin: 0 auto; border-bottom:solid 1px #e9e9e9; background-color: #ffffff;}
+#logodiv{width: 150px; height: 100px; display: table; margin-left: 300px; float: left;}
+#logoimg{width: 150px; height: 30px; text-align: center; display: table-cell; vertical-align: middle;}
+#tapdiv{width: 600px; height: 100px; display: table; margin-left: 255px; float: left;}
+
+#mainmenu{list-style-type:none; width: 600px; height: 100px;}
+#mainmenu li{float: left; position: relative;margin: 15px 80px 0px 0px;}
+#mainmenu li a{display: block; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #222222; text-decoration: none;}
+#mainmenu li:hover > a{color: #1cb97c;}
+#mainmenu li:checked > a{color: #1cb97c;}
+#mainmenu ul{list-style-type:none; margin: 0; position: absolute; width: 200px; opacity: 0;}
+#mainmenu ul li{float: none;}
+#mainmenu ul li a{font-size: 14px; text-align: center; font-weight: normal;}
+#mainmenu ul li:hover a{color: #1cb97c;}
+#mainmenu ul li:checked a{color: #1cb97c;}
+#mainmenu li:hover ul{opacity: 1;}
+#mainmenu li:checked ul{opacity: 1;}
+
+#memberdiv{width: 200px; height: 100px; display: table; float: left; float: right;}
+#logindiv{width: 83px; height: 100px; text-align: center; display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.7px; color: #6e6e6e;}
+#alarmdiv{width: 100px; height: 100px; text-align: left; display: table-cell; vertical-align: middle;}
+#alarm{width: 24px; height: 24px; background-color: transparent; background-image: url("image/alarmicon.svg"); border: none; outline: none; margin-top: 10px; margin-left: 3px;}
+
+#maindiv{width:1920px; height: 2580px;}
+
+#seedboxdiv{width: 1320px; height: 420px; margin: 60px auto 0px;}
+#seedphotodiv{width:300px; height: 300px; background-color: #f5f5f5; float: left; background-image: url("image/auction_ing_hover_8.png");}
+#companyname{height: 28px; border-radius: 5px; background-color: #1cb97c; text-align: center; font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height: normal; letter-spacing: -0.8px; color: #ffffff; padding-left: 7px; padding-right: 7px; margin-left: 20px;}
+#seedname{width:950px; float: left; padding-left: 20px; margin-top: 20px; height: 50px; font-family: 'Noto Sans CJK KR'; font-size: 48px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:0.94; letter-spacing: -2.3px; color: #222222; float: left;}
+#category{width:950px; float: left; padding-left: 27px; margin-top: 27px; height: 50px; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:0.94; letter-spacing: -2.3px; color: #6e6e6e; float: left;}
+#rightbox{width:300px; height: 100px;float: right; text-align: right; margin-top: 15px;}
+.left{width:80px; height: 25px; float: left; text-align: left; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #6e6e6e; margin-bottom: 10px;}
+.right{width:200px; height: 25px; float: right; text-align: right; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #000000; margin-bottom: 10px;}
+#opentime{width:300px; height: 25px;font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #6e6e6e; float: left; margin-top: 80px; margin-left: 27px;}
+#rightbox{width:350px; height: 100px;float: right; text-align: right; margin-top: 15px;}
+.left{width:100px; height: 25px; float: left; text-align: left; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #6e6e6e; margin-bottom: 10px;}
+.right{width:200px; height: 25px; float: right; text-align: right; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1px; color: #000000; margin-bottom: 10px;}
+#attentiondiv{width: 150px; height: 25p; float: right; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #d8d8d8;}
+
+#contenttapdiv{width:860px; height: 60px; margin-top: 95px; margin-left:300px; float: left;}
+.tap{display: none;}
+.tap + label{width: 420px; height: 60px; float: left; text-align: center; border: none; border-bottom: solid 1px #e9e9e9; outline:none; background-color: transparent; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -1.14px; color: #6e6e6e;}
+.tap:checked + label{border-bottom: solid 4px #222222; color: #222222; font-weight: bold;}
+
+#contentboxdiv{width: 840px; height: 700px; margin-top: 55px; margin-left:300px; float: left;}
+
+#biddingbox{width: 869px; height: 498px;}
+#biddingtitle{width: 869px; height: 60px; background-color: #1cb97c;}
+#titleleftdiv{width:320px; height: 60px; padding-left: 30px; display: table; float: left;}
+#titleleft{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #ffffff; display: table-cell; vertical-align: middle;}
+#titlecenterdiv{width:135px; height: 60px;display: table; float: left; text-align: center;}
+#titlecenter{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #ffffff; display: table-cell; vertical-align: middle;}
+#titlerightdiv{width:320px; height: 60px; padding-right: 30px; display: table; float: left; text-align: right;}
+#titleright{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #ffffff; display: table-cell; vertical-align: middle;}
+#biddingcontent{width:870px; height: 601.5px; border-bottom:solid 1px #e9e9e9;}
+#bluddiv{width:870px; height: 265px; border-bottom:solid 1.2px #d8d8d8;}
+#reddiv{width:870px; height: 265px; border-bottom:solid 1.2px #d8d8d8;}
+.contentline{width: 870px; height:43px;}
+.contentleftdiv{width:270px; height: 43px; padding-left: 30px; float: left; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #3f3f3f;padding-top: 10px;}
+.contentcenterdiv{width: 200px; height: 43px; padding-left:20px; padding-right: 20px; float: left; text-align: center;padding-top: 10px;}
+.conmoneybl{width:80px; height: 43px; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; float: left; position: relative; left: 55px;}
+.conpercentbl{width:50px; height: 43px; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color:#6e6e6e; float: right;}
+.conmoneyre{width:80px; height: 43px; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; float: left; position: relative; left: 5px;}
+.conpercentre{width:50px; height: 43px; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color:#6e6e6e; float: left;}
+.contentrightdiv{width:270px; height: 43px; padding-right: 30px; float: left; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #3f3f3f; text-align: right;padding-top: 10px;}
+.blue{background-color: #f4f6fb; color:#1f4dc2;}
+.red{background-color: #fcf4f6; color:#ff3e56;}
+.resultture{background-color: #f3fbf8;}
+.bidding{width: 850px; height: 43px;}
+.conpricediv{width:320px; height: 23px; padding-left: 30px; display: table; float: left;}
+.conprice{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #3f3f3f; display: table-cell; vertical-align: middle;}
+.connumdiv{width:135px; height: 23px;display: table; float: left; text-align: center;}
+.connum{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #3f3f3f; display: table-cell; vertical-align: middle;}
+.conresultdiv{width:320px; height: 23px; padding-right: 30px; display: table; float: left; text-align: right;}
+.conresult{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #3f3f3f; display: table-cell; vertical-align: middle;}
+.successful{color: #ff3e56;}
+.partsuccessful{color: #1f4dc2;}
+#biddingtotal{width: 870px; height: 60px; }
+#totalleftdiv{width:320px; height: 60px; padding-left: 30px; display: table; float: left;}
+#totalleft{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; display: table-cell; vertical-align: middle;}
+#totalcenterdiv{width:135px; height: 60px;display: table; float: left; text-align: center;}
+#totalcenter{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; display: table-cell; vertical-align: middle;}
+#totalrightdiv{width:320px; height: 60px; padding-right: 30px; display: table; float: right; text-align: right; margin-right: 24px;}
+#totalright{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; display: table-cell; vertical-align: middle;}
+
+#infobox{width: 850px; height: 700px; background-color: #18A29B; position: relative; top:-500px; visibility: hidden;}
+
+#orderdiv{width: 420px; height: 560px; box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05); border: solid 0.5px #6e6e6e; background-color: #ffffff; float: right; margin-top: -50px; margin-right: 290px;}
+#orderboxtitle{width: 419px; height: 80px; border-bottom: solid 1px #e9e9e9; background-color: #f2f2f2;}
+.rightbox{display: none;}
+.rightbox + label{width: 105px; height: 80px; background-color: #f2f2f2; position: relative; top:22px; padding:22px 29px 22px 30px; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #6e6e6e;}
+.rightbox:checked + label{background-color: #1cb97c; color: #ffffff;}
+#useseedmoneydiv{width: 420px; height: 25px; margin-top: 20px;float: left;}
+#useseedmoney{width: 150px; height: 25px; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #3f3f3f; margin-left: 30px;}
+.formclass{width: 340px; height: 60px;}
+#useedmoney{font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.9px; color: #1cb97c; float:right; position: relative; top:-25px; right:38px;}
+#moneybox{width: 340px; height: 60px; background-color: #f2f2f2; margin-top: 10px; margin-left: 30px; display: table; text-align: left; padding-left: 20px; position: relative; top:30px;}
+#moneyboxtitle{width: 130px; height: 55px; display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #6e6e6e; float: left; position: relative; top:16px;}
+#moneyboxlabel{width:100px; height: 55px; display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; text-align: right; padding-right: 5px; border: none; background-color: transparent; float: right; margin-right: 30px;}
+.plusminubtndiv{width:100px; height: 55px; display: table-cell; vertical-align: middle; position: relative; top:5px; left:5px;}
+.minususbtn{width:40px; height: 40px; float: left; background-image: url("image/minus.png"); position: relative; left:5px;}
+.plusbtn{width:40px; height: 40px; float: left; background-image: url("image/plus.svg"); position: relative; left:4px;}
+#numdiv{width: 340px; height: 60px; background-color: #f2f2f2; margin-top: 50px; margin-left: 30px; display: table; text-align: left; padding-left: 20px;}
+#numtitle{width: 130px; height: 55px; display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #6e6e6e; float: left; position: relative; top:16px;}
+#weeklabel{width:100px; height: 55px; display: table-cell; vertical-align: middle; font-family: 'Noto Sans CJK KR'; font-size: 16px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; text-align: right; padding-right: 5px; border: none; background-color: transparent; float: left;}
+#weekselectdiv{width: 365px; height: 40px; margin: 20px auto 0px;}
+.week{display: none;}
+.week + label{width: 69px; height: 30px; border: solid 1px #d8d8d8; background-color: #ffffff; font-family: 'Noto Sans CJK KR'; font-size: 14px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.8px; color: #6e6e6e; padding-top: 8px; float:left; text-align: center;}
+.week:checked + label{background-color: #1cb97c; color: #ffffff; border: solid 1px #1cb97c;}
+#totalmoneydiv{width: 420px; height: 40px; margin : 40px auto 0px; }
+#amount{width:100px; height: 40px; margin-left: 30px; float: left; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: normal; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.8px; color: #3f3f3f;}
+#seedmoney{width: 200px; height: 40px; float: right; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.8px; color: #1cb97c; }
+#seedmoney{width: 200px; height: 40px; float: right; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: bold; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.8px; color: #1cb97c; }
+#orderbtndiv{width: 420px; height: 50px; margin-top : 30px;}
+#orderbtn{width: 360px ;height: 50px; border-radius: 25px; background-color: #1cb97c; margin-left: 30px; border: none; outline: none; font-family: 'Noto Sans CJK KR'; font-size: 21px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.8px; color: #ffffff;}
+
+#buydiv{width: 420px; height: 500px;}
+#salediv{width: 420px; height: 500px; margin-top: -500px;  visibility: hidden;}
+#salegroup{width: 361px; height: 410px; margin-left: 30px; margin-top: 30px; background: url("image/salegroup.svg") no-repeat;}
+#correctiondiv{width: 420px; height: 500px; margin-top: -530px;  visibility: hidden;}
+#correctgroup{width: 419px; height: 499px; background: url("image/correctiongroup.svg") no-repeat;}
+#conculsiondiv{width: 420px; height: 500px; margin-top: -500px; visibility: hidden;}
+#conculsiongroup{width: 419px; height: 260px; background: url("image/conculgroup.svg") no-repeat;}
+
+#precautiondiv{width: 430px; height: 500px; float:right; margin-top: 25px; margin-right: 280px;}
+#precautiontitlediv{width: 420px; height: 45px; border-bottom: solid 2px #222222;}
+#precautiontitle{width: 100px; height: 40px; font-family: 'Noto Sans CJK KR'; font-size: 24px; font-weight: 500; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #222222; text-align: center; position: relative; top:5px;}
+#precaution{width: 430px; height: 300px; margin-top: 15px; font-family: 'Noto Sans CJK KR'; font-size: 18px; font-weight: 300; font-stretch: normal; font-style: normal; line-height:normal; letter-spacing: -0.86px; color: #3f3f3f; margin-left: 3px;}
+
+#footer{width: 1620px; height: 390px; background-color: #f5f5f5; margin-top: 140px; padding-left: 300px; padding-top: 60px;}
+.footerlabel{font-family:"Noto Sans CJK KR"; font-size:18px; font-weight: 300; font-stretch: normal; font-style: normal; line-height: 1.67px; letter-spacing: -0.3px;}
+
+#btndiv{width: 50px; height: 120px; float: left; position:fixed; bottom:10px; right:10px;}
+#up{width:50px; height: 50px; background-image: url("image/uppageicon.svg"); border: none; outline: none; background-color: transparent;}
+#chat{width:60px; height: 60px; background-image: url("image/chaticon.svg"); border: none; outline: none; background-color: transparent; position: relative; top:10px; right: 8px;}
